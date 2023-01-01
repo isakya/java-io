@@ -28,8 +28,8 @@ public class ByteStreamDemo01 {
 
         // 2. 读取数据
         int b1;
-        while((b1 = fis.read()) != -1) {
-            System.out.println((char)b1);
+        while((b1 = fis.read()) != -1) { // read读取一个数据就移动一次指针
+            System.out.print((char)b1);
         }
 
         // 3. 关闭资源
