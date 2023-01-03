@@ -10,8 +10,13 @@ import java.io.Serializable;
  */
 
 public class Student implements Serializable {
+    // 细节1：版本号
+    private static final long serialVersionUID = 6746582546342271507L;
     private String name;
     private int age;
+    // 细节2：transient：瞬态关键字
+    // 作用：不会把当前属性序列化到本地文件当中
+    private transient String address;
 
     public Student(String name, int age) {
         this.name = name;
@@ -32,5 +37,14 @@ public class Student implements Serializable {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", address='" + address + '\'' +
+                '}';
     }
 }

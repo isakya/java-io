@@ -1,8 +1,6 @@
 package com.izumi.myobjectstream;
 
 import java.io.*;
-import java.util.Arrays;
-import java.util.Objects;
 
 public class ObjectStreamDemo02 {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
